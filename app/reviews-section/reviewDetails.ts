@@ -26,7 +26,7 @@ export const workExperiences = [
   {
     name: "Undergraduate Teacher Assistant",
     company: "FAST NUCES Lahore",
-    date: "Jan 2025 - Present",
+    date: "Jan 2025 - May 2025",
     details:
       "Teaching Assistant for Software Engineering (CS-2004). Guided students through complex programming concepts, and assisted in debugging and problem-solving. Evaluated assignments, held office hours, and collaborated with faculty to improve student learning experiences.",
     profileImg: NU,

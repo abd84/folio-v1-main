@@ -1,3 +1,4 @@
+"use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -12,132 +13,119 @@ const ProjectCard = ({
   name,
   description,
   technologies,
+  domain, // Pass domain as a prop
   github,
   demo,
   image,
   available,
 }: ProjectProps) => {
   return (
-    <motion.div
-      style={
-        {
-          backgroundColor: "#212531",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center center",
-          position: "relative",
-        } as React.CSSProperties
-      }
-      className={`relative z-10 h-[550px]  w-full items-stretch justify-center overflow-hidden rounded-3xl bg-center py-0 sm:h-[700px] sm:w-[100%] md:h-[650px] md:w-[100%] lg:h-[500px]`}
-      initial="initial"
-      animate="animate"
-    >
-      <Image
-        src={image}
-        alt={name}
-        style={{ borderRadius: "16px" }}
-        className={`absolute -bottom-2 w-[70%] sm:w-[85%] md:w-[60%] lg:max-w-[55%] ${
-          id % 2 === 0 ? "right-0" : "left-0"
-        }`}
-      />
-      <div
-        className={`absolute top-0 text-[#0E1016] ${
-          id % 2 === 0 ? "left-0 ml-8 lg:ml-14" : "right-0 mr-8 lg:mr-14"
-        } mt-6 flex  items-center justify-center gap-4 lg:mt-10`}
-      >
-        {available ? (
-          <>
-            <Link
-              href={github}
-              target="_blank"
-              className="rounded-full"
-              aria-label="Open GitHub Repository"
-            >
-              <FontAwesomeIcon
-                icon={faGithub}
-                className=" w-[20px] rounded-full bg-white p-5 text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
-                data-blobity
-                data-blobity-radius="38"
-                data-blobity-offset-x="4"
-                data-blobity-offset-y="4"
-                data-blobity-magnetic="true"
-              />
-            </Link>
-            <Link href={demo} target="_blank" aria-label="Open Live Demo">
-              <FontAwesomeIcon
-                icon={faLink}
-                className=" w-[20px] rounded-full bg-white p-5 text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
-                data-blobity
-                data-blobity-radius="38"
-                data-blobity-offset-x="4"
-                data-blobity-offset-y="4"
-                data-blobity-magnetic="trues"
-              />
-            </Link>
-          </>
-        ) : (
-          <div className=" flex items-center justify-center gap-4">
-            <Link
-              href={github}
-              target="_blank"
-              className="mt-1 rounded-full"
-              aria-label="Open GitHub Repository"
-            >
-              <FontAwesomeIcon
-                icon={faGithub}
-                className=" w-[20px]  rounded-full bg-white p-5 text-[20px] md:w-[25px] md:text-[24px] lg:w-[30px] lg:text-[28px]"
-                data-blobity
-                data-blobity-radius="38"
-                data-blobity-offset-x="4"
-                data-blobity-offset-y="4"
-                data-blobity-magnetic="true"
-              />
-            </Link>
-            <div className=" rounded-xl bg-white px-4 py-2 md:px-5 md:py-3 lg:px-6 lg:py-4">
-              <h3 className="text-[16px] md:text-[18px] lg:text-[20px] ">
-                Coming soon
-              </h3>
-            </div>
+<motion.div
+  style={{
+    backgroundColor: "#212531",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center",
+    position: "relative",
+  }}
+  className={`relative z-10 w-full items-stretch justify-center overflow-hidden rounded-3xl bg-center py-0 h-[550px] sm:h-[400px] md:h-[650px] lg:h-[500px]`}
+  initial="initial"
+  animate="animate"
+>
+  {/* Image */}
+  <Image
+    src={image}
+    alt={name}
+    style={{ borderRadius: "16px" }}
+    className={`absolute -bottom-2 w-[70%] sm:w-[85%] md:w-[60%] lg:max-w-[55%] project-image ${
+      id % 2 === 0 ? "right-0" : "left-0"
+    }`}
+  />
+
+  {/* Card Content */}
+  <div
+    className={`absolute top-0 text-[#0E1016] ${
+      id % 2 === 0 ? "left-0 ml-8 lg:ml-14" : "right-0 mr-8 lg:mr-14"
+    } mt-6 flex items-center justify-between gap-4 lg:mt-10`}
+  >
+    {/* Domain Name */}
+    <div className="text-[#FFE4C4] text-[16px] sm:text-[18px] md:text-[20px] font-semibold">
+      {domain}
+    </div>
+
+    {/* Icons */}
+    <div className="flex items-center justify-center gap-4">
+      {available ? (
+        <>
+          <Link
+            href={github}
+            target="_blank"
+            className="rounded-full"
+            aria-label="Open GitHub Repository"
+          >
+            <FontAwesomeIcon
+              icon={faGithub}
+              className="w-[20px] rounded-full bg-white p-3 text-[20px] sm:w-[25px] sm:text-[24px] lg:w-[30px] lg:text-[28px]"
+            />
+          </Link>
+        </>
+      ) : (
+        <div className="flex items-center justify-center gap-4">
+          <Link
+            href={github}
+            target="_blank"
+            className="mt-1 rounded-full"
+            aria-label="Open GitHub Repository"
+          >
+            <FontAwesomeIcon
+              icon={faGithub}
+              className="w-[20px] rounded-full bg-white p-3 text-[20px] sm:w-[25px] sm:text-[24px] lg:w-[30px] lg:text-[28px]"
+            />
+          </Link>
+          <div className="rounded-xl bg-white px-4 py-2 md:px-5 md:py-3 lg:px-6 lg:py-4">
+            <h3 className="text-[16px] sm:text-[18px] lg:text-[20px]">
+              Coming soon
+            </h3>
           </div>
-        )}
-      </div>
-      <div
-        className={`absolute text-white  ${
-          !(id % 2 === 0)
-            ? "right-0 top-32 mr-0 ml-10 md:right-0 md:ml-0 lg:right-0 lg:top-60  lg:mr-4"
-            : "left-10 top-32 ml-0 md:mr-12 lg:top-52 lg:ml-4"
-        } mb-10  md:mb-16 lg:mb-14 `}
-      >
-        {/* Project Title */}
-        <h2
-          className={
-            "max-w-[90%] text-[28px] leading-tight text-white sm:text-[32px] md:text-[40px] lg:max-w-[450px] lg:text-[48px]"
-          }
-        >
-          {name}
-        </h2>
-        {/* Project Description */}
-        <AnimatedBody
-          text={description}
-          className={
-            "mt-4 w-[90%] max-w-[457px] text-[16px] font-semibold text-[#95979D] "
-          }
-        />
-        {/* Technologies */}
-        <div className="mt-9 flex flex-wrap gap-2 sm:gap-4">
-          {technologies.map((tech, id) => (
-            <span
-              key={id}
-              className={
-                "whitespace-nowrap rounded-lg px-3 py-1 text-[13px] font-bold uppercase tracking-wide sm:text-[16px] lg:text-[18px]"
-              }
-            >
-              {tech}
-            </span>
-          ))}
         </div>
-      </div>
-    </motion.div>
+      )}
+    </div>
+  </div>
+
+  {/* Project Title, Description, and Technologies */}
+  <div
+    className={`absolute text-[#FFE4C4] ${
+      !(id % 2 === 0)
+        ? "right-0 top-20 mr-0 ml-10 md:right-0 md:ml-0 lg:right-0 lg:top-40 lg:mr-4"
+        : "left-10 top-20 ml-0 md:mr-12 lg:top-40 lg:ml-4"
+    } mb-10 md:mb-16 lg:mb-14`}
+  >
+    {/* Project Title */}
+    <h2 className="max-w-[100%] text-[28px] leading-tight text-[#e4ded7] sm:text-[32px] md:text-[40px] lg:max-w-[450px] lg:text-[48px] mb-0">
+      {name}
+    </h2>
+
+    {/* Project Description */}
+    <AnimatedBody
+      text={description}
+      className="mt-4 w-[100%] max-w-[457px] text-[16px] font-semibold text-[#95979D] sm:text-[15px] md:text-[18px]"
+    />
+
+    {/* Technologies */}
+    <div className="mt-2 flex flex-wrap gap-1.5 sm:gap-2 ">
+      {technologies.map((tech, id) => (
+        <span
+          key={id}
+          className="whitespace-nowrap rounded-lg px-1 py-1 text-[12px] font-bold uppercase tracking-wide sm:text-[12px] lg:text-[12px]"
+        >
+          {tech}
+        </span>
+      ))}
+    </div>
+  </div>
+</motion.div>
+
+
   );
 };
 

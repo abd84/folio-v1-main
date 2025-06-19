@@ -36,4 +36,66 @@ body {
 
 body {
   overflow-y: hidden;
+}/* Media query to adjust layout for mobile screens */
+@media (max-width: 768px) {
+  .project-card {
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center the content horizontally */
+    height: auto; /* Allow height to be dynamic based on content */
+    padding: 1rem;
+  }
+
+  /* Make sure the image is centered in the card */
+  .project-image {
+    display: block; /* Ensure image is displayed */
+    margin: 1rem 0; /* Space around the image */
+    width: 80%; /* Ensure the image is not too big on mobile */
+    max-width: 90%; /* Limit the image size */
+  }
+
+  /* Adjust text and title size for mobile */
+  .project-card h2 {
+    font-size: 1.5rem; /* Adjust title size for mobile */
+    margin: 0.5rem 0;
+    text-align: left; 
+  }
+
+  .project-card .description {
+    font-size: 1rem; /* Adjust description font size */
+    line-height: 1.5;
+    text-align: left; /* Center align text */
+  }
+
+  .project-card .icons {
+    display: flex;
+    justify-content: center; /* Align icons horizontally in the center */
+    margin-top: 1rem;
+  }
+
+  /* Adjust the spacing between technologies */
+  .project-card .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: left; /* Center align technologies */
+    margin-top: 1rem;
+  }
+
+  /* Adjust footer spacing */
+  .project-card .footer {
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
 }
+/* / Make sure you have this CSS in your global stylesheet (e.g., globals.css) */
+ @keyframes fadeIn {
+   from { opacity: 0; transform: translateY(20px); }
+   to { opacity: 1; transform: translateY(0); }
+ }
+ .animate-fade-in {
+   animation: fadeIn 0.5s ease-out forwards;
+ }
