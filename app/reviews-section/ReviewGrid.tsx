@@ -41,7 +41,7 @@ const WorkExperienceGrid = () => {
         viewport={{ amount: "some", once: true }}
         href="https://www.upwork.com/freelancers/~01e1539123e8154286"
         target="_blank"
-        className="mt-10 mb-5 sm:mb-0 sm:mt-20"
+        className="mt-10 mb-5 sm:mb-0 sm:mt-20 text-white"
       >
         Hire me on Upwork ✨
       </motion.a>

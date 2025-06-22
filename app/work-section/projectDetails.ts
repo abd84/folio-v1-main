@@ -1,3 +1,4 @@
+"use client";
 export type ProjectProps = {
   id: number;
   name: string;
@@ -21,7 +22,7 @@ export const devProjects = [
     demo: "",
     image: require(".//../../public/projects/project-1.jpg"),
     available: true,
-    domain: "Machine Learning", // Added domain
+    domain: "Machine Learning/Deep Learning", // Added domain
   },
   {
     id: 1,
@@ -33,7 +34,7 @@ export const devProjects = [
     demo: "",
     image: require(".//../../public/projects/project-2.jpg"),
     available: true,
-    domain: "NLP", // Added domain
+    domain: "Machine Learning/Deep Learning", // Added domain
   },
   {
     id: 2,
@@ -45,7 +46,7 @@ export const devProjects = [
     demo: "",
     image: require(".//../../public/projects/project-3.jpg"),
     available: true,
-    domain: "Healthcare AI", // Added domain
+    domain: "Machine Learning/Deep Learning", // Added domain
   },
     {
     id: 7,
@@ -57,7 +58,7 @@ export const devProjects = [
     demo: "",
     image: require(".//../../public/projects/project-8.jpg"),
     available: true,
-    domain: "E-Commerce Automation", // Added domain
+    domain: "AI Automation", // Added domain
   },
     {
     id: 8,
@@ -69,7 +70,7 @@ export const devProjects = [
     demo: "",
     image: require(".//../../public/projects/project-9.jpg"),
     available: true,
-    domain: "AI in Healthcare", // Added domain
+    domain: "Machine Learning/Deep Learning", // Added domain
   },
   {
     id: 3,
@@ -81,7 +82,7 @@ export const devProjects = [
     demo: "",
     image: require(".//../../public/projects/project-2.jpg"),
     available: true,
-    domain: "Computer Vision", // Added domain
+    domain: "Machine Learning/Deep Learning", // Added domain
   },
   {
     id: 4,
@@ -104,7 +105,7 @@ export const devProjects = [
     demo: "",
     image: require(".//../../public/projects/project-6.jpg"),
     available: true,
-    domain: "AI Assistant", // Added domain
+    domain: "AI Automation", // Added domain
   },
   {
     id: 6,
@@ -116,7 +117,7 @@ export const devProjects = [
     demo: "",
     image: require(".//../../public/projects/project-7.jpg"),
     available: true,
-    domain: "Recommendation Systems", // Added domain
+    domain: "Machine Learning/Deep Learning", // Added domain
   },
 
 ];
