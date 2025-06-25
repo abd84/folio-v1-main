@@ -25,10 +25,9 @@ const About = () => {
       {/* Left side text content */}
       <div className="mb-10 flex w-[100%] flex-col gap-4 text-base font-medium leading-relaxed tracking-wide text-[#e4ded7] md:mb-16 md:gap-6 md:text-lg lg:mb-16 lg:max-w-[90%]">
         <p>
-         I am a Data Scientist and AI/ML Engineer with a strong passion for building smart, data-driven solutions. I hold a Bachelor&apos;s degree in Data Science from FAST NUCES, Lahore, Pakistan. My expertise includes working with machine learning, deep learning, Large Language Models (LLMs), Explainable AI (XAI), NLP, computer vision, and data analytics.
-         I have had the opportunity to work with many national and international clients, helping them solve their business problems by delivering AI solutions. Whether it&apos;s building machine learning models, creating custom chatbots, or implementing AI automation workflows, I have worked on over 20 projects that have helped businesses improve their processes and grow.
-         In addition to my academic background, I also work as a freelancer on Upwork, providing AI-driven solutions to clients globally. My goal is to continue solving complex challenges and creating impactful AI systems that make a real difference in business operations.
-        </p>
+  I am a Data Scientist and AI/ML Engineer with a strong passion for building smart, data-driven solutions. I hold a Bachelor&apos;s degree in Data Science from FAST NUCES, Lahore, Pakistan. My expertise includes working with machine learning, deep learning, Large Language Models (LLMs), Explainable AI (XAI), NLP, computer vision, and data analytics.
+</p>
+
       </div>
 
       {/* Right side skills list */}
