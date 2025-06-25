@@ -6,6 +6,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ProjectProps } from "./projectDetails";
 
 const ProjectCard = ({
   id,
