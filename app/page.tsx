@@ -1,7 +1,8 @@
 "use client";
 import Hero from "./hero-section/Hero";
 import useBlobity from "blobity/lib/react/useBlobity";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { ScrollerMotion } from "scroller-motion";
 import PreLoader from "./animations/PreLoader/PreLoader";
 import { initialBlobityOptions } from "./utils/BlobityConfig";
@@ -16,6 +17,8 @@ const Footer = dynamic(() => import("./footer/Footer"));
 
 export default function Home() {
   const blobityInstance = useBlobity(initialBlobityOptions);
+  const [pageKey, setPageKey] = useState(0);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (blobityInstance.current) {
@@ -25,18 +28,20 @@ export default function Home() {
   }, [blobityInstance]);
 
   useEffect(() => {
+    // Force page refresh when pathname changes
+    setPageKey(prev => prev + 1);
+    
+    // Scroll to top when page loads
     window.scrollTo({
       top: 0,
       left: 0,
     });
-  }, []);
+  }, [pathname]);
 
   return (
-    <>
+    <div key={pageKey}>
       <PreLoader />
-
       <NavBar />
-
       {/* <ScrollerMotion> */}
       <main className="flex flex-col items-center justify-center">
         <Hero />
@@ -47,6 +52,6 @@ export default function Home() {
         <Footer />
       </main>
       {/* </ScrollerMotion> */}
-    </>
+    </div>
   );
 }

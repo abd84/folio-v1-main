@@ -12,18 +12,21 @@ const AnimatedWords2: React.FC<AnimatedWords2Props> = ({ title, style }) => {
   const ctrls = useAnimation();
 
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.1, // Lowered from 0.5 to 0.1
     triggerOnce: true,
   });
 
+  //   useEffect(() => {
+  //     if (inView) {
+  //       ctrls.start("animate");
+  //     }
+  //     if (!inView) {
+  //       ctrls.start("initial");
+  //     }
+  //   }, [ctrls, inView]);
   useEffect(() => {
-    if (inView) {
-      ctrls.start("animate");
-    }
-    if (!inView) {
-      ctrls.start("initial");
-    }
-  }, [ctrls, inView]);
+    ctrls.start("animate"); // Always animate for debugging
+  }, [ctrls]);
 
   const wordAnimation2 = {
     initial: {

@@ -18,7 +18,7 @@ export const workExperiences = [
   {
     name: "Undergraduate Research Assistant - LLMs",
     company: "FAST NUCES Lahore",
-    date: "Feb 2025 - Present",
+    date: "Feb 2025 - June 2025",
     details:
       "Fine-tuned pre-trained LLMs on domain-specific data, improving NLP benchmark performance. Collaborating on research addressing LLM challenges, including bias, ethics, and fairness.",
     profileImg: NU,
@@ -26,7 +26,7 @@ export const workExperiences = [
   {
     name: "Undergraduate Teacher Assistant",
     company: "FAST NUCES Lahore",
-    date: "Jan 2025 - May 2025",
+    date: "Jan 2025 - June 2025",
     details:
       "Teaching Assistant for Software Engineering (CS-2004). Guided students through complex programming concepts, and assisted in debugging and problem-solving. Evaluated assignments, held office hours, and collaborated with faculty to improve student learning experiences.",
     profileImg: NU,

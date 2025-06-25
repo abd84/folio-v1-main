@@ -3,6 +3,8 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Syne } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { usePathname, useRouter } from "next/navigation";
+import ClientWrapper from "./ClientWrapper";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "www.abdullahnaeem.me",
     images: [
       {
-        url: "https://user-images.githubusercontent.com/84178696/228620835-e3cc5c9b-72fc-4f54-a628-407ef7b650f5.png",
+        url: "/profile.webp",
         width: 1200,
         height: 630,
         alt: "Abdullah Naeem - Data Scientist",
@@ -61,7 +63,7 @@ export const metadata: Metadata = {
     creator: "abdullah__",
     creatorId: "1243720976552144897",
     images: [
-      "https://user-images.githubusercontent.com/84178696/228620835-e3cc5c9b-72fc-4f54-a628-407ef7b650f5.png",
+      "/profile.webp",
     ],
   },
   robots: {
@@ -90,7 +92,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={`${syne.className} scroll-smooth scrollbar-thin scrollbar-track-[#0E1016] scrollbar-thumb-[#212531]`}
       >
-        {children}
+        <ClientWrapper>
+          {children}
+        </ClientWrapper>
         <Analytics />
       </body>
     </html>

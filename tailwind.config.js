@@ -13,6 +13,9 @@ module.exports = {
       screens: {
         "3xl": "1600px",
       },
+      fontFamily: {
+        anton: ['Anton', 'Arial Black', 'sans-serif'],
+      },
     },
   },
   plugins: [require("tailwind-scrollbar"), require("@tailwindcss/line-clamp")],
