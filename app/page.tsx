@@ -1,31 +1,20 @@
 "use client";
 import Hero from "./hero-section/Hero";
-import useBlobity from "blobity/lib/react/useBlobity";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { ScrollerMotion } from "scroller-motion";
 import PreLoader from "./animations/PreLoader/PreLoader";
-import { initialBlobityOptions } from "./utils/BlobityConfig";
 import NavBar from "./navbar/NavBar";
-
 import dynamic from "next/dynamic";
-import Reviews from "./reviews-section/ReviewGrid";
+// import Reviews from "./reviews-section/ReviewGrid";
 const Work = dynamic(() => import("./work-section/Work"));
 const About = dynamic(() => import("./about-section/About"));
+const Experience = dynamic(() => import("./experience-section/Experience"));
 const Contact = dynamic(() => import("./contact-section/Contact"));
 const Footer = dynamic(() => import("./footer/Footer"));
 
 export default function Home() {
-  const blobityInstance = useBlobity(initialBlobityOptions);
   const [pageKey, setPageKey] = useState(0);
   const pathname = usePathname();
-
-  useEffect(() => {
-    if (blobityInstance.current) {
-      // @ts-ignore for debugging purposes or playing around
-      window.blobity = blobityInstance.current;
-    }
-  }, [blobityInstance]);
 
   useEffect(() => {
     // Force page refresh when pathname changes
@@ -45,9 +34,10 @@ export default function Home() {
       {/* <ScrollerMotion> */}
       <main className="flex flex-col items-center justify-center">
         <Hero />
-        <Work />
-        <Reviews />
         <About />
+        <Experience />
+        <Work />
+        {/* <Reviews /> */}
         <Contact />
         <Footer />
       </main>
