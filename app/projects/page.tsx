@@ -10,7 +10,11 @@ const ProjectsPage = () => {
   const filteredProjects =
     domain === "All Projects"
       ? devProjects
-      : devProjects.filter((project) => project.domain === domain);
+      : devProjects.filter((project) =>
+          domain === "Machine Learning/Deep Learning"
+            ? project.domain === "Machine Learning" || project.domain === "Deep Learning"
+            : project.domain === domain
+        );
 
   return (
     <div className="bg-[#0E1016] px-4 py-20 text-white sm:px-6 lg:px-8 lg:py-28">
@@ -22,19 +26,25 @@ const ProjectsPage = () => {
         <div className="flex justify-center mb-6">
           <button
             onClick={() => setDomain("Machine Learning/Deep Learning")}
-            className="mx-4 px-4 py-2 text-blue-500 border-2 border-blue-500 rounded bg-transparent hover:bg-blue-500 hover:text-white transition-all"
+            className={`mx-4 px-4 py-2 text-blue-500 border-2 border-blue-500 rounded bg-transparent hover:bg-blue-500 hover:text-white transition-all ${
+              domain === "Machine Learning/Deep Learning" ? "bg-blue-500 text-white" : ""
+            }`}
           >
             Machine Learning/Deep Learning
           </button>
           <button
             onClick={() => setDomain("AI Automation")}
-            className="mx-4 px-4 py-2 text-blue-500 border-2 border-blue-500 rounded bg-transparent hover:bg-blue-500 hover:text-white transition-all"
+            className={`mx-4 px-4 py-2 text-blue-500 border-2 border-blue-500 rounded bg-transparent hover:bg-blue-500 hover:text-white transition-all ${
+              domain === "AI Automation" ? "bg-blue-500 text-white" : ""
+            }`}
           >
             AI Automation
           </button>
           <button
             onClick={() => setDomain("All Projects")}
-            className="mx-4 px-4 py-2 text-blue-500 border-2 border-blue-500 rounded bg-transparent hover:bg-blue-500 hover:text-white transition-all"
+            className={`mx-4 px-4 py-2 text-blue-500 border-2 border-blue-500 rounded bg-transparent hover:bg-blue-500 hover:text-white transition-all ${
+              domain === "All Projects" ? "bg-blue-500 text-white" : ""
+            }`}
           >
             All Projects
           </button>

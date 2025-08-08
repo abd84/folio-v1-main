@@ -27,18 +27,19 @@ const Footer = () => {
     >
       <div className="mx-auto flex w-[90%] flex-row items-center justify-between text-center text-[12px] text-[#e4ded7] sm:text-[12px] md:text-[14px] lg:max-w-[1440px] lg:text-[14px]">
         <span className="m-0 p-0">© {year}</span>
-        <div className="flex flex-col sm:flex-row sm:gap-1 md:gap-2">
-          <span className="m-0 p-0">Portfolio of </span>
-          <Link
-            href="https://github.com/abd84"
-            target="_blank"
-            aria-label="Abdullah's GitHub Profile"
-          >
-            <span className="underline underline-offset-2 hover:no-underline">
-              Abdullah Naeem
-            </span>
-          </Link>
-        </div>
+       <div className="flex flex-col sm:flex-row sm:gap-1 md:gap-2">
+  <span className="m-0 p-0">Portfolio of </span>
+  <Link
+    href="https://github.com/abd84"
+    target="_blank"
+    aria-label="Abdullah's GitHub Profile"
+  >
+    <span className="underline underline-offset-2 hover:no-underline">
+      Abdullah Naeem
+    </span>
+  </Link>
+  <span className="m-0 p-0 text-blue-400 font-semibold ml-2">| Contact: +92 355 5178153</span>
+</div>
       </div>
     </section>
   );

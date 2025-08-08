@@ -1,7 +1,6 @@
 import gsap from "gsap";
 
 // Declare a general timeline to use in all the animation functions.
-
 const tl = gsap.timeline();
 
 // Preloader Animation
@@ -13,17 +12,14 @@ export const preLoaderAnim = () => {
   })
     .from(".texts-container span", {
       duration: 1.5,
-      delay: 1,
       y: 70,
       skewY: 10,
-      stagger: 0.4,
       ease: "Power3.easeOut",
     })
     .to(".texts-container span", {
       duration: 1,
       y: 70,
       skewY: -20,
-      stagger: 0.2,
       ease: "Power3.easeOut",
     })
     .to("body", {
@@ -57,9 +53,16 @@ export const mobileLanding = () => {
   window.innerWidth < 763 &&
     tl.from(".landing__main2", {
       duration: 1,
-      delay: 0,
       opacity: 0,
       y: 80,
       ease: "expo.easeOut",
     });
+
+  // Make the texts appear immediately on page load for small screen
+  tl.to(".data, .ai, .solutions", {
+    duration: 0,
+    opacity: 1,
+    y: 0,
+    ease: "Power3.easeOut",
+  });
 };

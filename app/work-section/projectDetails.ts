@@ -22,7 +22,7 @@ export const devProjects = [
     demo: "",
     image: require(".//../../public/projects/project-1.jpg"),
     available: true,
-    domain: "Machine Learning/Deep Learning", // Added domain
+    domain: "Deep Learning", // Added domain
   },
   {
     id: 1,
@@ -34,7 +34,7 @@ export const devProjects = [
     demo: "",
     image: require(".//../../public/projects/project-9.jpg"),
     available: true,
-    domain: "Machine Learning/Deep Learning", // Added domain
+    domain: "Deep Learning ", // Added domain
   },
    {
     id: 2,
@@ -58,7 +58,7 @@ export const devProjects = [
     demo: "",
     image: require(".//../../public/projects/project-2.jpg"),
     available: true,
-    domain: "Machine Learning/Deep Learning", // Added domain
+    domain: "NLP", // Added domain
   },
   {
     id: 4,
@@ -70,7 +70,7 @@ export const devProjects = [
     demo: "",
     image: require(".//../../public/projects/project-3.jpg"),
     available: true,
-    domain: "Machine Learning/Deep Learning", // Added domain
+    domain: "Machine Learning", // Added domain
   },
     {
     id: 5,
@@ -108,7 +108,7 @@ export const devProjects = [
     demo: "",
     image: require(".//../../public/projects/project-2.jpg"),
     available: true,
-    domain: "Machine Learning/Deep Learning", // Added domain
+    domain: "Machine Learning", // Added domain
   },
   {
     id: 8,
@@ -143,7 +143,7 @@ export const devProjects = [
     demo: "",
     image: require(".//../../public/projects/project-7.jpg"),
     available: true,
-    domain: "Machine Learning/Deep Learning", // Added domain
+    domain: "Machine Learning", // Added domain
   },
 
 ];
