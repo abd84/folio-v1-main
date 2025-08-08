@@ -8,6 +8,9 @@
 // import slash from "../../public/review-slash.svg";
 // import { motion } from "framer-motion";
 
+// This empty export statement makes this file a module to satisfy TypeScript's --isolatedModules flag
+export {};
+
 // const WorkCard = ({
 //   name,
 //   company,

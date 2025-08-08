@@ -6,6 +6,9 @@
 // import olamide from "../../public/olamide.jpeg";
 // import umar from "../../public/umar.jpeg";
 
+// This empty export statement makes this file a module to satisfy TypeScript's --isolatedModules flag
+export {};
+
 // export type WorkExperienceProps = {
 //   name: string;
 //   company: string;

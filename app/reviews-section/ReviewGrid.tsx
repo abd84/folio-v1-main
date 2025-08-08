@@ -4,6 +4,9 @@
 // import { monaSans } from "../fonts/monaSans";
 // import { motion } from "framer-motion";
 
+// This empty export statement makes this file a module to satisfy TypeScript's --isolatedModules flag
+export {};
+
 // const Reviews = () => {
 //   return (
 //     <section className="z-10 flex w-full flex-col items-center justify-center overflow-hidden bg-[#0E1016] bg-cover bg-center pt-20 md:pb-16 lg:pb-24">
