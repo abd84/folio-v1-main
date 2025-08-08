@@ -6,7 +6,7 @@ import "./stars.css";
 const NU = "/National_University_of_Computer_and_Emerging_Sciences_logo.png";
 const BW = "/thebytewise_logo.jpeg";
 const TENX = "/tenx.png";
-const SS = "/buildables.png";
+const SS = "/Buildables.png";
 
 const Experience = () => {
   const experiences = [
